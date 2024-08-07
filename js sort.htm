@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>[5, -3, 1, 7, 6, -4, 8, 2, 3]</h3>
+
+    <script>
+      const artim = document.querySelector("h3");
+      const arr = [5, -3, 1, 7, 6, -4, 8, 2, 3];
+
+      function sortartim(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+              let bos = arr[i];
+              arr[i] = arr[j];
+              arr[j] = bos;
+            }
+          }
+        }
+        return arr;
+        console.log(arr);
+      }
+    </script>
+  </body>
+</html>

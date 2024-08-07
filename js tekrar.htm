@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 3, 4, 3, 3, 3, 2, 5, 6, 3, 7];
+
+      function tekrar(arr) {
+        const say = [];
+        const tekrarlanan = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          const n = arr[i];
+          if (say[n]) {
+            say[n]++;
+          } else {
+            say[n] = 1;
+          }
+        }
+
+        for (let n = 0; n < arr.length; n++) {
+          if (say[n] > 1) {
+            tekrarlanan.push(n);
+          }
+        }
+        return tekrarlanan;
+      }
+      console.log(tekrar(arr));
+    </script>
+  </body>
+</html>
